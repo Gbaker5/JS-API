@@ -15,7 +15,13 @@ img{
   margin: 0 auto;
 }
 
+body{
+  text-align: center;
+}
 
+li{
+  list-style-type: none;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
