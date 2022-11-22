@@ -1,5 +1,5 @@
 //Example fetch using pokemonapi.co
-document.querySelector('button').addEventListener('click', getFetch)
+document.querySelector('#choose').addEventListener('click', getFetch)
 
 
 let image = document.querySelector('image')
@@ -55,12 +55,14 @@ function getFetch(){
         console.log(data.stats[1].stat.name)
         data.stats.forEach( obj => {
           
-          console.log(obj.stat.name)
-          //const statP = document.createElement('p')//create paragraph
-          //statP.id = 'statPara'//set id of newly created pragraph to 'statPara'
-          //statP.textContent = obj.stat.name //add text to paragraph
-          
-          //document.querySelector('#statPara').appendChild(statP)
+        console.log(obj.stat.name)
+        //console.log(obj.stat.url)
+          const statButton = document.createElement('button')//create paragraph
+          statButton.className = obj.stat.url//set id of newly created pragraph to 'statPara'
+          statButton.innerText = obj.stat.name //add text to paragraph
+          //statButton.addEventListener('click', getFetch2)
+          document.querySelector('#pokeStats').appendChild(statButton)
+          console.log()
         })
 
       })
@@ -69,10 +71,16 @@ function getFetch(){
       });
 }
 
+
 document.querySelector('#test').addEventListener('click', getFetch2)
 
+
+
+
 function getFetch2(){
-  const url = 'https://pokeapi.co/api/v2/stat/2/'
+ 
+  console.log('yes')
+  const url = 
 
 
   fetch(url)
