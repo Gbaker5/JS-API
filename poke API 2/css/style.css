@@ -11,8 +11,9 @@
 /* LAYOUT
 /*******************************************/
 img{
-  display: block;
-  margin: 0 auto;
+  
+  height:200px;
+  width:200px;
 }
 
 body{
@@ -46,6 +47,23 @@ h2{
   flex-direction: row;
   flex-wrap: wrap;
   
+}
+
+/*name and image*/
+.namepic > ul{
+  display:flex;
+  flex-direction: row;
+  margin:auto 100px
+}
+
+.namepic > ul >li{
+  display:flex;
+  flex-direction: row;
+  margin:auto 100px
+}
+
+#pokename{
+  font-size: 65px;
 }
 
 /*moves*/

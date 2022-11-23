@@ -13,7 +13,7 @@ function getFetch(){
   document.querySelector('#pokeMoves').innerText = ''
   document.querySelector('#pokeTypes').innerText = ''
   document.querySelector('#wgt').innerText = ''
-  document.querySelector('#pokeStats').innerText = ''
+  
   
   const choice = document.querySelector('input').value //value from input
   const url = 'https://pokeapi.co/api/v2/pokemon/'+choice.toLowerCase()
@@ -28,6 +28,9 @@ function getFetch(){
         const name = data.name
         console.log(name[0].toUpperCase())
         document.querySelector('#pokename').innerText = data.name[0].toUpperCase() + data.name.substring(1)
+
+        //image
+        
         
         //abilities
         data.abilities.forEach(obj => {
@@ -81,29 +84,3 @@ function getFetch(){
 
 
 
-//function getFetch3{
-
-
-//}
-
-
-document.querySelector('#test').addEventListener('click', getFetch2)
-
-
-
-function getFetch2(){
-  const url = 'https://pokeapi.co/api/v2/stat/2/'
-  
-
-  fetch(url)
-    .then(res => res.json()) // parse response as JSON
-    .then(data => {
-      console.log(data)
-
-
-
-  })
-  .catch(err => {
-      //console.log(`error ${err}`)
-  })
-}
