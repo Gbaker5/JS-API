@@ -26,11 +26,50 @@ function getFetch(){
         
         //name 
         const name = data.name
-        console.log(name[0].toUpperCase())
         document.querySelector('#pokename').innerText = data.name[0].toUpperCase() + data.name.substring(1)
 
         //image
-        
+        if(document.querySelector('#pokename').innerText === 'Bulbasaur'){
+          document.querySelector('img').src = 'img/bulbasaur.png'
+        }else if(document.querySelector('#pokename').innerText === 'Ivysaur'){
+          document.querySelector('img').src = 'img/ivysaur.png'
+        }else if(document.querySelector('#pokename').innerText === 'Venusaur'){
+          document.querySelector('img').src = 'img/venusaur.png'
+        }else if(document.querySelector('#pokename').innerText === 'Charmander'){
+          document.querySelector('img').src = 'img/charmander.png'
+        }else if(document.querySelector('#pokename').innerText === 'Charmeleon'){
+          document.querySelector('img').src = 'img/charmeleon.png'
+        }else if(document.querySelector('#pokename').innerText === 'Charizard'){
+          document.querySelector('img').src = 'img/charizard.png'
+        }else if(document.querySelector('#pokename').innerText === 'Squirtle'){
+          document.querySelector('img').src = 'img/squirtle.png'
+        }else if(document.querySelector('#pokename').innerText === 'Wartortle'){
+          document.querySelector('img').src = 'img/wartortle.png'
+        }else if(document.querySelector('#pokename').innerText === 'Blastoise'){
+          document.querySelector('img').src = 'img/blastoise.png'
+        }else if(document.querySelector('#pokename').innerText === 'Caterpie'){
+          document.querySelector('img').src = 'img/caterpie.png'
+        }else if(document.querySelector('#pokename').innerText === 'Metapod'){
+          document.querySelector('img').src = 'img/metapod.png'
+        }else if(document.querySelector('#pokename').innerText === 'Butterfree'){
+          document.querySelector('img').src = 'img/butterfree.png'
+        }else if(document.querySelector('#pokename').innerText === 'Weedle'){
+          document.querySelector('img').src = 'img/weedle.png'
+        }else if(document.querySelector('#pokename').innerText === 'Kakuna'){
+          document.querySelector('img').src = 'img/kakuna.png'
+        }else if(document.querySelector('#pokename').innerText === 'Beedrill'){
+          document.querySelector('img').src = 'img/beedrill.png'
+        }else if(document.querySelector('#pokename').innerText === 'Pidgey'){
+          document.querySelector('img').src = 'img/pidgey.png'
+        }else if(document.querySelector('#pokename').innerText === 'Pidgeotto'){
+          document.querySelector('img').src = 'img/pidgeotto.png'
+        }else if(document.querySelector('#pokename').innerText === 'Pidgeot'){
+          document.querySelector('img').src = 'img/pidgeot.png'
+        }else if(document.querySelector('#pokename').innerText === 'Rattata'){
+          document.querySelector('img').src = 'img/rattata.png'
+        }else if(document.querySelector('#pokename').innerText === 'Raticate'){
+          document.querySelector('img').src = 'img/raticate.png'
+        }
         
         //abilities
         data.abilities.forEach(obj => {
@@ -57,20 +96,20 @@ function getFetch(){
         document.querySelector('#wgt').innerText = data.weight
 
         //stats
-        console.log(data.stats)
-        console.log(data.stats[1].stat.name)
-        data.stats.forEach( obj => {
+        //console.log(data.stats)
+        //console.log(data.stats[1].stat.name)
+        //data.stats.forEach( obj => {
           
-        console.log(obj.stat.name)
+        //console.log(obj.stat.name)
         //console.log(obj.stat.url)
-          const statButton = document.createElement('button')//create paragraph
-          const newUrl = obj.stat.url//set id of newly created pragraph to 'statPara'
-          console.log(newUrl)
-          statButton.innerText = obj.stat.name //add text to paragraph
+          //const statButton = document.createElement('button')//create paragraph
+          //const newUrl = obj.stat.url//set id of newly created pragraph to 'statPara'
+          //console.log(newUrl)
+          //statButton.innerText = obj.stat.name //add text to paragraph
           //statButton.addEventListener('click', getFetch2)
-          document.querySelector('#pokeStats').appendChild(statButton)
-          console.log()
-        })
+          //document.querySelector('#pokeStats').appendChild(statButton)
+          //console.log()
+        //})
      
         //if you set each button to have a different id 
         //then write an if statement 'if id == id' then perform function for displaying those stats
