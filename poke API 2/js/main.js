@@ -58,13 +58,17 @@ function getFetch(){
         console.log(obj.stat.name)
         //console.log(obj.stat.url)
           const statButton = document.createElement('button')//create paragraph
-          statButton.className = obj.stat.url//set id of newly created pragraph to 'statPara'
+          const newUrl = obj.stat.url//set id of newly created pragraph to 'statPara'
+          console.log(newUrl)
           statButton.innerText = obj.stat.name //add text to paragraph
           //statButton.addEventListener('click', getFetch2)
           document.querySelector('#pokeStats').appendChild(statButton)
           console.log()
         })
-
+     
+        //if you set each button to have a different id 
+        //then write an if statement 'if id == id' then perform function for displaying those stats
+        //create functions outside of this function to call api again
       })
       .catch(err => {
           console.log(`error ${err}`)
@@ -72,26 +76,27 @@ function getFetch(){
 }
 
 
-document.querySelector('#test').addEventListener('click', getFetch2)
+//document.querySelector('#test').addEventListener('click', getFetch2)
+
+//let buttonText = ('#pokeStat > button.innerText')
 
 
 
+//function getFetch2(){
+  //console.log(buttonText)
+  //console.log('yes')
+  //const url = 'https://pokeapi.co/api/v2/stat/1/'
+  //if('#pokeStat')
 
-function getFetch2(){
- 
-  console.log('yes')
-  const url = 
-
-
-  fetch(url)
-    .then(res => res.json()) // parse response as JSON
-    .then(data => {
-      console.log(data)
-
+  //fetch(url)
+    //.then(res => res.json()) // parse response as JSON
+    //.then(data => {
+      //console.log(data)
 
 
-  })
-  .catch(err => {
-      console.log(`error ${err}`)
-  })
-}
+
+  //})
+  //.catch(err => {
+      //console.log(`error ${err}`)
+  //})
+//}
