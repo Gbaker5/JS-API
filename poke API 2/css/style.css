@@ -46,6 +46,10 @@ h2{
   justify-content: center;
 }
 
+.container4 > li > button{
+  margin:10px;
+}
+
 li{
   list-style-type: none;
   margin: 10px;

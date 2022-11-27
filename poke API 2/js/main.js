@@ -15,7 +15,7 @@ function getFetch(){
 
   
   const choice = document.querySelector('input').value //value from input
-  const url = 'https://pokeapi.co/api/v2/pokemon/'+choice 
+  const url = 'https://pokeapi.co/api/v2/pokemon/'+choice.toLowerCase()
 
   fetch(url)
       .then(res => res.json()) // parse response as JSON
@@ -24,26 +24,28 @@ function getFetch(){
         
         
         //name 
-        document.querySelector('#pokename').innerText = data.name
+        const name = data.name
+        console.log(name[0].toUpperCase())
+        document.querySelector('#pokename').innerText = data.name[0].toUpperCase() + data.name.substring(1)
         
         //abilities
         data.abilities.forEach(obj => {
           const abilityLi = document.createElement('li') //create an li
-          abilityLi.textContent = obj.ability.name //add text to li
+          abilityLi.textContent = obj.ability.name[0].toUpperCase() + obj.ability.name.substring(1) //add text to li
           document.querySelector('#pokeAbility').appendChild(abilityLi)//append the li to the ul
         })
         
         //moves
         data.moves.forEach(obj => {
           const moveLi = document.createElement('li') //create an li
-          moveLi.textContent = obj.move.name //add text to li
+          moveLi.textContent = obj.move.name[0].toUpperCase() + obj.move.name.substring(1) //add text to li
           document.querySelector('#pokeMoves').appendChild(moveLi)//append the li to the ul
         })
         
         //types
         data.types.forEach(obj => {
           const typeLi = document.createElement('li') //create an li
-          typeLi.textContent = obj.type.name //add text to li
+          typeLi.textContent = obj.type.name[0].toUpperCase() + obj.type.name.substring(1) //add text to li
           document.querySelector('#pokeTypes').appendChild(typeLi)//append the li to the ul
         })
         
