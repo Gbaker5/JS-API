@@ -1,5 +1,6 @@
 //Example fetch using pokemonapi.co
 document.querySelector('#choose').addEventListener('click', getFetch)
+document.querySelector('#choose').addEventListener('submit', getFetch)
 
 
 let image = document.querySelector('image')
@@ -12,7 +13,7 @@ function getFetch(){
   document.querySelector('#pokeMoves').innerText = ''
   document.querySelector('#pokeTypes').innerText = ''
   document.querySelector('#wgt').innerText = ''
-
+  document.querySelector('#pokeStats').innerText = ''
   
   const choice = document.querySelector('input').value //value from input
   const url = 'https://pokeapi.co/api/v2/pokemon/'+choice.toLowerCase()
@@ -78,27 +79,31 @@ function getFetch(){
 }
 
 
-//document.querySelector('#test').addEventListener('click', getFetch2)
-
-//let buttonText = ('#pokeStat > button.innerText')
 
 
-
-//function getFetch2(){
-  //console.log(buttonText)
-  //console.log('yes')
-  //const url = 'https://pokeapi.co/api/v2/stat/1/'
-  //if('#pokeStat')
-
-  //fetch(url)
-    //.then(res => res.json()) // parse response as JSON
-    //.then(data => {
-      //console.log(data)
+//function getFetch3{
 
 
-
-  //})
-  //.catch(err => {
-      //console.log(`error ${err}`)
-  //})
 //}
+
+
+document.querySelector('#test').addEventListener('click', getFetch2)
+
+
+
+function getFetch2(){
+  const url = 'https://pokeapi.co/api/v2/stat/2/'
+  
+
+  fetch(url)
+    .then(res => res.json()) // parse response as JSON
+    .then(data => {
+      console.log(data)
+
+
+
+  })
+  .catch(err => {
+      //console.log(`error ${err}`)
+  })
+}

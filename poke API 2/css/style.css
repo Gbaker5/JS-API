@@ -17,15 +17,30 @@ img{
 
 body{
   text-align: center;
-  background: linear-gradient(to right,darkblue, lightblue, darkblue);
+  background: linear-gradient(to right,darkblue, #008b8b, darkblue);
   /*background-image: url(../img/pokeicon.png);*/
   color:white;
+  font-size: 1.2em;
+}
+
+h1{
+  color:yellow;
+}
+
+/*top paragraph*/
+.descript{
+  color:orange;
 }
 
 h2{
+  text-align: left;
   color:black;
+  font-size: 35px;
+  margin-left: 15%;
+  text-decoration:underline;
 }
 
+/*pokemon names*/
 .container >ul{
   display:flex;
   flex-direction: row;
@@ -33,21 +48,27 @@ h2{
   
 }
 
+/*moves*/
 .container2{
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
   
+  margin: auto 10%;
 }
 
+/*types-weight-ability*/
 .container3{
   text-align: center;
   display: flex;
   justify-content: center;
 }
 
-.container4 > li > button{
-  margin:10px;
+/*buttons*/
+.container4 > button{
+  margin:auto 10px;
 }
 
 li{
