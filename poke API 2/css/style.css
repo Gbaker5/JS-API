@@ -18,24 +18,29 @@ img{
 
 body{
   text-align: center;
-  background: linear-gradient(to right,darkblue, #008b8b, darkblue);
+  background: linear-gradient(blue, orange, blue);
   /*background-image: url(../img/pokeicon.png);*/
   color:white;
   font-size: 1.2em;
 }
 
 h1{
-  color:yellow;
+  color:red;
+  text-decoration: underline;
 }
 
 /*top paragraph*/
 .descript{
-  color:orange;
+  color: white;
+}
+
+.descript-ct{
+  background-color: rgba(0,0,0,.50);
 }
 
 h2{
   text-align: left;
-  color:black;
+  color:red;
   font-size: 35px;
   margin-left: 15%;
   text-decoration:underline;
@@ -46,7 +51,12 @@ h2{
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-  
+  color: linear-gradient(yellow, black)
+}
+
+.container > ul >li{
+  background-color: gray;
+  background-image: url(../img/goldbg.webp);
 }
 
 /*name and image*/
@@ -59,7 +69,7 @@ h2{
 .namepic > ul >li{
   display:flex;
   flex-direction: row;
-  margin:auto 100px
+  margin:auto 20%;
 }
 
 #pokename{
@@ -92,6 +102,10 @@ h2{
 li{
   list-style-type: none;
   margin: 10px;
+}
+
+.container3 >li, .container2 >li, .namepic>ul>li, .container3{
+  color:yellow;
 }
 /******************************************
 /* ADDITIONAL STYLES
