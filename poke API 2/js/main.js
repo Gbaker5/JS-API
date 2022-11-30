@@ -1,9 +1,11 @@
-//Example fetch using pokemonapi.co
+//Fetch using pokemonapi.co
+
+//button
 document.querySelector('#choose').addEventListener('click', getFetch)
 document.querySelector('#choose').addEventListener('submit', getFetch)
 
 
-let image = document.querySelector('image')
+
 
 
 function getFetch(){
@@ -29,6 +31,8 @@ function getFetch(){
         document.querySelector('#pokename').innerText = data.name[0].toUpperCase() + data.name.substring(1)
 
         //image
+
+        
         if(document.querySelector('#pokename').innerText === 'Bulbasaur'){
           document.querySelector('img').src = 'img/bulbasaur.png'
         }else if(document.querySelector('#pokename').innerText === 'Ivysaur'){
